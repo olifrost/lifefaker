@@ -1,0 +1,54 @@
+{
+  "name": "lifefaker",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://olifro.st/lifefaker/",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "find-unused-css": "^0.8.1",
+    "flux": "^4.0.4",
+    "fullpage-react": "^3.0.28",
+    "gh-pages": "^6.1.1",
+    "jquery": "^3.7.1",
+    "postcss": "^8.5.6",
+    "react": "^17.0.2",
+    "react-collapsible": "^2.10.0",
+    "react-dom": "^17.0.2",
+    "react-ga": "^3.3.1",
+    "react-motion": "^0.5.2",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.9.0",
+    "react-slick": "^0.30.2",
+    "react-slide-deck": "^0.2.3",
+    "react-youtube": "^10.1.0",
+    "react-youtube-embed": "^1.0.2",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^1.3.1",
+    "slick-carousel": "^1.8.1",
+    "snapsvg-cjs": "^0.0.6"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "browserslist": "^4.25.1"
+  }
+}

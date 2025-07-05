@@ -1,0 +1,82 @@
+import React, { Component } from "react";
+//import AppStore from "../stores/AppStore";
+import $ from "jquery";
+import "../App.css";
+
+class NavComponent extends Component {
+  constructor(props){
+    super(props);
+
+    this.onScrollPosition = this.onScrollPosition.bind(this);
+  }
+
+  componentWillMount(){
+
+  }
+
+  componentWillReceiveProps(props){
+
+  }
+
+  onScrollPosition = function(){
+    var el = $(".main-template")[0];
+    var _h = document.getElementsByClassName("intro-container")[0].clientHeight;
+
+
+    if(Math.floor($(el).scrollTop() / _h) < 1){
+      document.getElementById("header").style.opacity = "0";
+    }
+    else{
+      document.getElementById("logo-svg").style.fill = "#FC5C67";
+      document.getElementById("header").style.opacity = "1";
+      document.getElementById("header").style.background = "rgba(255,255,255,1)";
+      document.getElementById("header").style.border = "1px solid #f7f7f7";
+
+    }
+  }
+
+  componentDidMount(){
+    document.getElementById("logo-svg").style.fill = "#FFFFFF";
+    setInterval(this.onScrollPosition, 50);
+  }
+
+
+  render() {
+    return (
+      <header className="app-header" id="header">
+        <div className="navleft">
+
+        </div>
+        <div className="logo">
+        <svg id='logo-svg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 627.09 207.04'>
+            <path d='M609.66,349.23a98.67,98.67,0,0,1-145.79,0H438.55a118.64,118.64,0,0,0,196.43,0Z'
+            transform='translate(-107 -194.28)' />
+            <polygon className='cls-1' points='0 122.74 0 3.24 22.02 3.24 22.02 122.74 0 122.74 0 122.74'
+            />
+            <path className='cls-1' d='M146,207.94a13.58,13.58,0,1,1,13.49,13.48A13.63,13.63,0,0,1,146,207.94ZM148.53,317V231.67h22V317Z'
+            transform='translate(-107 -194.28)' />
+            <path className='cls-1' d='M235.39,216.3c-12.12-.85-18.09,3.93-18.09,14.51v.86h18.09v21.16H217.3V317h-22V252.83H183V231.67h12.29v-.86c0-24.07,13.49-37.21,40.12-35.68V216.3Z'
+            transform='translate(-107 -194.28)' />
+            <path className='cls-1' d='M264.05,283.39c2.9,10.75,10.93,16.05,24.07,16.05,8.37,0,14.85-2.91,19.12-8.54L325,301.14c-8.36,12.12-20.82,18.27-37.21,18.27-14.17,0-25.43-4.27-34-12.8S241,287.32,241,274.34c0-12.8,4.26-23.56,12.63-32.09,8.36-8.71,19.29-13,32.43-13,12.47,0,22.88,4.27,30.9,13,8.2,8.71,12.29,19.29,12.29,32.09a57.89,57.89,0,0,1-.85,9.05Zm43.19-17.07c-2.56-11.61-11.09-17.24-21.17-17.24-11.77,0-19.8,6.31-22.36,17.24Z'
+            transform='translate(-107 -194.28)' />
+            <path className='cls-1' d='M388.84,216.3c-12.12-.85-18.09,3.93-18.09,14.51v.86h18.09v21.16H370.75V317h-22V252.83H336.44V231.67h12.29v-.86c0-24.07,13.48-37.21,40.11-35.68V216.3Z'
+            transform='translate(-107 -194.28)' />
+            <path className='cls-1' d='M463.77,231.67h22V317h-22V307c-6.66,8.36-15.88,12.46-27.83,12.46-11.43,0-21.17-4.27-29.36-13-8-8.71-12.12-19.46-12.12-32.1s4.1-23.22,12.12-31.92c8.19-8.71,17.93-13.15,29.36-13.15,11.95,0,21.17,4.1,27.83,12.47V231.67ZM440,298.41q10.24,0,16.9-6.65c4.61-4.61,6.83-10.42,6.83-17.42s-2.22-12.8-6.83-17.24c-4.44-4.61-10.07-6.83-16.9-6.83s-12.46,2.22-16.9,6.83c-4.44,4.44-6.66,10.24-6.66,17.24s2.22,12.81,6.66,17.42q6.66,6.64,16.9,6.65Z'
+            transform='translate(-107 -194.28)' />
+            <polygon className='cls-1' points='477.03 122.74 451.43 122.74 420.36 83.99 420.36 122.74 398.34 122.74 398.34 3.24 420.36 3.24 420.36 74.94 449.72 37.39 476.01 37.39 441.7 79.55 477.03 122.74 477.03 122.74'
+            />
+            <path className='cls-1' d='M605.38,283.39c2.9,10.75,10.92,16.05,24.07,16.05,8.36,0,14.85-2.91,19.11-8.54l17.76,10.24c-8.37,12.12-20.83,18.27-37.21,18.27-14.17,0-25.44-4.27-34-12.8s-12.8-19.29-12.8-32.27c0-12.8,4.27-23.56,12.63-32.09,8.37-8.71,19.29-13,32.44-13,12.46,0,22.87,4.27,30.9,13,8.19,8.71,12.28,19.29,12.28,32.09a57.89,57.89,0,0,1-.85,9.05Zm43.18-17.07c-2.55-11.61-11.09-17.24-21.16-17.24-11.78,0-19.81,6.31-22.37,17.24Z'
+            transform='translate(-107 -194.28)' />
+            <path className='cls-1' d='M708.15,246.35c4.09-10.93,14.34-16.39,25.94-16.39v24.58a25.63,25.63,0,0,0-18.09,4.1c-5.29,3.58-7.85,9.39-7.85,17.58V317h-22V231.67h22v14.68Z'
+            transform='translate(-107 -194.28)' />
+        </svg>
+        </div>
+        <div className="navright">
+
+        </div>
+      </header>
+    );
+  }
+}
+
+export default NavComponent;
