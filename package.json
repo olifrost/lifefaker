@@ -2,7 +2,7 @@
   "name": "lifefaker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://olifro.st/lifefaker-2/",
+  "homepage": "https://olifro.st/lifefaker/",
   "dependencies": {
     "ajv": "^8.17.1",
     "find-unused-css": "^0.8.1",
